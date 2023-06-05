@@ -1,53 +1,62 @@
-import { Streamer } from "./Streamer";
-export class Canal{
-    private nombre: String;
-    private bannerURL: String;
-    private nombreEstreamer:Streamer;
-    private descripcionDetallada:String;
-  
- 
-    constructor(
-        nombre: string = '',
-        bannerURL: string = '',
-        nombreEstreamer: Streamer ,
-        descripcionDetallada: string = '',
-   
-      ) {
-        this.nombre = nombre;
-        this.bannerURL = bannerURL;
-        this.nombreEstreamer = nombreEstreamer;
-        this.descripcionDetallada = descripcionDetallada;
-     
-      }
+import { Streamer } from "./Streamer.js";
+
+export class Canal {
+  private nombre: string;
+  private bannerURL: string;
+  private nombreEstreamer: string;
+  private descripcionDetallada: string;
+  private propietario?: string;
+
+  constructor(
+    nombre: string = '',
+    bannerURL: string = '',
+    nombreEstreamer: string = '',
+    descripcionDetallada: string = '',
+    datosPropietario?: string
+  ) {
+    this.nombre = nombre;
+    this.bannerURL = bannerURL;
+    this.nombreEstreamer = nombreEstreamer;
+    this.descripcionDetallada = descripcionDetallada;
+    this.propietario = datosPropietario;
+  }
+
+
      
       // Sobreescritura del constructor
 
-      get Nombre(): string {
-        return this.Nombre;
+      getNombre(): string {
+        return this.nombre;
       }
-      get BannerURL(): string {
-        return this.BannerURL;
+      getBannerURL(): string {
+        return this.bannerURL;
       }
-      get NombreEstreamer(): Streamer {
-        return this.NombreEstreamer;
+      getNombreEstreamer():string{
+        return this.nombreEstreamer;
       }
-      get DescripcionDetallada(): string {
-        return this.DescripcionDetallada;
+      getDescripcionDetallada(): string {
+        return this.descripcionDetallada;
       }
  
       
     
-      set Nombre(e: string) {
+      setNombre(e: string) {
         this.nombre = e;
       }
-      set  BannerURL(e: string) {
-        this.BannerURL= e;
+      setBannerURL(e: string) {
+        this.bannerURL= e;
       }
-      set NombreEstreamer(e: Streamer) {
-        this.NombreEstreamer = e;
+      setNombreEstreamer(e: string) {
+        this.nombreEstreamer = e;
       }
-      set DescripcionDetallada(e: string) {
-        this.DescripcionDetallada = e;
+      setDescripcionDetallada(e: string) {
+        this.descripcionDetallada = e;
       }
-     
+      getPropietario(): string | undefined {
+        return this.propietario;
+      }
+    
+      setPropietario(nuevoPropietario: string): void {
+        this.propietario = nuevoPropietario;
+      }
 }

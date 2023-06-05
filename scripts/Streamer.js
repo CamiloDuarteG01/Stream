@@ -1,31 +1,33 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Streamer = void 0;
-class Streamer {
-    constructor(nickname = '', listaDeRedesSociales = [], descripcion = '') {
+export class Streamer {
+    constructor(nickname = '', listaDeRedesSociales = [], descripcion = '', myCanal) {
         this.nickname = nickname;
         this.listaDeRedesSociales = listaDeRedesSociales;
         this.descripcion = descripcion;
+        this.myCanal = myCanal;
     }
-    // Sobreescritura del constructor
-    get Nickname() {
-        return this.Nickname;
+    getNickname() {
+        return this.nickname;
     }
-    get ListaDeRedesSociales() {
-        return this.ListaDeRedesSociales;
+    getListaDeRedesSociales() {
+        return this.listaDeRedesSociales;
     }
-    get Descripcion() {
-        return this.Descripcion;
+    getDescripcion() {
+        return this.descripcion;
     }
-    set Nickname(e) {
-        this.Nickname = e;
+    setNickname(nickname) {
+        this.nickname = nickname;
     }
-    set ListaDeRedesSociales(e) {
-        this.ListaDeRedesSociales = e;
+    setListaDeRedesSociales(listaDeRedesSociales) {
+        this.listaDeRedesSociales = listaDeRedesSociales;
     }
-    set Descripcion(e) {
-        this.Descripcion = e;
+    setDescripcion(descripcion) {
+        this.descripcion = descripcion;
+    }
+    getMyCanal() {
+        return this.myCanal;
+    }
+    setMyCanal(canal) {
+        this.myCanal = canal;
     }
 }
-exports.Streamer = Streamer;
 //# sourceMappingURL=Streamer.js.map

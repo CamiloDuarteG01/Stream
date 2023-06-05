@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Plataforma = void 0;
-class Plataforma {
+export class Plataforma {
     constructor(nombre = '', logoURL = '', descripcion = '', empresaPatroconadora = '', conjuntoDeCanales = []) {
         this.nombre = nombre;
         this.logoURL = logoURL;
@@ -9,37 +6,35 @@ class Plataforma {
         this.empresaPatroconadora = empresaPatroconadora;
         this.conjuntoDeCanales = conjuntoDeCanales;
     }
-    // Sobreescritura del constructor
     get Nombre() {
-        return this.Nombre;
+        return this.nombre;
     }
     get LogoURL() {
-        return this.LogoURL;
+        return this.logoURL;
     }
     get Descripcion() {
-        return this.Descripcion;
+        return this.descripcion;
     }
     get EmpresaPatroconadora() {
-        return this.EmpresaPatroconadora;
+        return this.empresaPatroconadora;
     }
     get ConjuntoDeCanales() {
-        return this.ConjuntoDeCanales;
+        return this.conjuntoDeCanales;
     }
     set Nombre(e) {
         this.nombre = e;
     }
     set LogoURL(e) {
-        this.LogoURL = e;
+        this.logoURL = e;
     }
     set Descripcion(e) {
-        this.Descripcion = e;
+        this.descripcion = e;
     }
     set EmpresaPatroconadora(e) {
-        this.EmpresaPatroconadora = e;
+        this.empresaPatroconadora = e;
     }
     set ConjuntoDeCanales(e) {
-        this.ConjuntoDeCanales = e;
+        this.conjuntoDeCanales = e;
     }
 }
-exports.Plataforma = Plataforma;
 //# sourceMappingURL=Plataforma.js.map

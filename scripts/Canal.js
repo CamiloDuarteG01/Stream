@@ -1,38 +1,41 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Canal = void 0;
-class Canal {
-    constructor(nombre = '', bannerURL = '', nombreEstreamer, descripcionDetallada = '') {
+export class Canal {
+    constructor(nombre = '', bannerURL = '', nombreEstreamer = '', descripcionDetallada = '', datosPropietario) {
         this.nombre = nombre;
         this.bannerURL = bannerURL;
         this.nombreEstreamer = nombreEstreamer;
         this.descripcionDetallada = descripcionDetallada;
+        this.propietario = datosPropietario;
     }
     // Sobreescritura del constructor
-    get Nombre() {
-        return this.Nombre;
+    getNombre() {
+        return this.nombre;
     }
-    get BannerURL() {
-        return this.BannerURL;
+    getBannerURL() {
+        return this.bannerURL;
     }
-    get NombreEstreamer() {
-        return this.NombreEstreamer;
+    getNombreEstreamer() {
+        return this.nombreEstreamer;
     }
-    get DescripcionDetallada() {
-        return this.DescripcionDetallada;
+    getDescripcionDetallada() {
+        return this.descripcionDetallada;
     }
-    set Nombre(e) {
+    setNombre(e) {
         this.nombre = e;
     }
-    set BannerURL(e) {
-        this.BannerURL = e;
+    setBannerURL(e) {
+        this.bannerURL = e;
     }
-    set NombreEstreamer(e) {
-        this.NombreEstreamer = e;
+    setNombreEstreamer(e) {
+        this.nombreEstreamer = e;
     }
-    set DescripcionDetallada(e) {
-        this.DescripcionDetallada = e;
+    setDescripcionDetallada(e) {
+        this.descripcionDetallada = e;
+    }
+    getPropietario() {
+        return this.propietario;
+    }
+    setPropietario(nuevoPropietario) {
+        this.propietario = nuevoPropietario;
     }
 }
-exports.Canal = Canal;
 //# sourceMappingURL=Canal.js.map

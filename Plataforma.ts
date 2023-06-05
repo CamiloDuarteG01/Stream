@@ -1,59 +1,63 @@
-import{Canal}from "./Canal";
-export class Plataforma{
-    private nombre: String;
-    private logoURL: String;
-    private descripcion:String;
-    private empresaPatroconadora:String;
-    private conjuntoDeCanales:Canal [];
- 
+import { Canal } from "./Canal.js";
+
+export class Plataforma {
+    private nombre: string;
+    private logoURL: string;
+    private descripcion: string;
+    private empresaPatroconadora: string;
+    private conjuntoDeCanales?: Canal[];
+
     constructor(
         nombre: string = '',
         logoURL: string = '',
         descripcion: string = '',
         empresaPatroconadora: string = '',
-        conjuntoDeCanales: Canal [] = []
-      ) {
+        conjuntoDeCanales: Canal[] = []
+    ) {
         this.nombre = nombre;
         this.logoURL = logoURL;
         this.descripcion = descripcion;
         this.empresaPatroconadora = empresaPatroconadora;
-        this.conjuntoDeCanales= conjuntoDeCanales;
-      }
-     
-      // Sobreescritura del constructor
+        this.conjuntoDeCanales = conjuntoDeCanales;
+    }
 
-      get Nombre(): string {
-        return this.Nombre;
-      }
-      get LogoURL(): string {
-        return this.LogoURL;
-      }
-      get Descripcion(): string {
-        return this.Descripcion;
-      }
-      get EmpresaPatroconadora(): string {
-        return this.EmpresaPatroconadora;
-      }
-      
-      get ConjuntoDeCanales(): Canal{
-        return this.ConjuntoDeCanales;
-      
-      }
-      
-    
-      set Nombre(e: string) {
+    get Nombre(): string {
+        return this.nombre;
+    }
+
+    get LogoURL(): string {
+        return this.logoURL;
+    }
+
+    get Descripcion(): string {
+        return this.descripcion;
+    }
+
+    get EmpresaPatroconadora(): string {
+        return this.empresaPatroconadora;
+    }
+
+    get ConjuntoDeCanales(): Canal[] | undefined {
+        return this.conjuntoDeCanales;
+    }
+
+    set Nombre(e: string) {
         this.nombre = e;
-      }
-      set  LogoURL(e: string) {
-        this.LogoURL= e;
-      }
-      set Descripcion(e: string) {
-        this.Descripcion = e;
-      }
-      set EmpresaPatroconadora(e: string) {
-        this.EmpresaPatroconadora = e;
-      }
-      set ConjuntoDeCanales(e: Canal) {
-        this.ConjuntoDeCanales = e;
-      }
+    }
+
+    set LogoURL(e: string) {
+        this.logoURL = e;
+    }
+
+    set Descripcion(e: string) {
+        this.descripcion = e;
+    }
+
+    set EmpresaPatroconadora(e: string) {
+        this.empresaPatroconadora = e;
+    }
+
+    set ConjuntoDeCanales(e: Canal[] |undefined) {
+        this.conjuntoDeCanales = e;
+    }
 }

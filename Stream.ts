@@ -1,23 +1,19 @@
-import{Categoria}from "./Categoria";
-export class Stream{
-    private conjuntoDeCategoriaes:Categoria [];
- 
-    constructor(
-        conjuntoDeCategoriaes: Categoria [] = []
-      ) {
-        this.conjuntoDeCategoriaes= conjuntoDeCategoriaes;
-      }
-     
-      // Sobreescritura del constructor
+import { Categoria } from "./Categoria.js";
 
-    
-      get ConjuntoDeCategoriaes(): Categoria{
-        return this.ConjuntoDeCategoriaes;
-      
-      }
-      
-    
-      set ConjuntoDeCategoriaes(e: Categoria) {
-        this.ConjuntoDeCategoriaes = e;
-      }
+export class Stream {
+    private conjuntoDeCategorias?: Categoria[];
+
+    constructor(
+        conjuntoDeCategorias: Categoria[] = []
+    ) {
+        this.conjuntoDeCategorias = conjuntoDeCategorias;
+    }
+
+    get ConjuntoDeCategorias(): Categoria[] | undefined {
+        return this.conjuntoDeCategorias;
+    }
+
+    set ConjuntoDeCategorias(e: Categoria[]| undefined ) {
+        this.conjuntoDeCategorias = e;
+    }
 }

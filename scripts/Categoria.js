@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Categoria = void 0;
-class Categoria {
+export class Categoria {
     constructor(nombre = '', imagenURL = '', descripcion = '') {
         this.nombre = nombre;
         this.imagenURL = imagenURL;
@@ -9,23 +6,22 @@ class Categoria {
     }
     // Sobreescritura del constructor
     get Nombre() {
-        return this.Nombre;
+        return this.nombre;
     }
     get ImagenURL() {
-        return this.ImagenURL;
+        return this.imagenURL;
     }
     get Descripcion() {
-        return this.Descripcion;
+        return this.descripcion;
     }
     set Nombre(e) {
         this.nombre = e;
     }
     set ImagenURL(e) {
-        this.ImagenURL = e;
+        this.imagenURL = e;
     }
     set Descripcion(e) {
-        this.Descripcion = e;
+        this.descripcion = e;
     }
 }
-exports.Categoria = Categoria;
 //# sourceMappingURL=Categoria.js.map

@@ -1,17 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Stream = void 0;
-class Stream {
-    constructor(conjuntoDeCategoriaes = []) {
-        this.conjuntoDeCategoriaes = conjuntoDeCategoriaes;
+export class Stream {
+    constructor(conjuntoDeCategorias = []) {
+        this.conjuntoDeCategorias = conjuntoDeCategorias;
     }
-    // Sobreescritura del constructor
-    get ConjuntoDeCategoriaes() {
-        return this.ConjuntoDeCategoriaes;
+    get ConjuntoDeCategorias() {
+        return this.conjuntoDeCategorias;
     }
-    set ConjuntoDeCategoriaes(e) {
-        this.ConjuntoDeCategoriaes = e;
+    set ConjuntoDeCategorias(e) {
+        this.conjuntoDeCategorias = e;
     }
 }
-exports.Stream = Stream;
 //# sourceMappingURL=Stream.js.map

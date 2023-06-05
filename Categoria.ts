@@ -1,8 +1,8 @@
 
 export class Categoria{
-    private nombre: String;
-    private descripcion:String;
-    private imagenURL:String;
+    private nombre: string;
+    private descripcion:string;
+    private imagenURL:string;
  
     constructor(
         nombre: string = '',
@@ -17,13 +17,13 @@ export class Categoria{
       // Sobreescritura del constructor
 
       get Nombre(): string {
-        return this.Nombre;
+        return this.nombre;
       }
       get ImagenURL(): string {
-        return this.ImagenURL;
+        return this.imagenURL;
       }
       get Descripcion(): string {
-        return this.Descripcion;
+        return this.descripcion;
       }
      
       
@@ -33,10 +33,10 @@ export class Categoria{
         this.nombre = e;
       }
       set  ImagenURL(e: string) {
-        this.ImagenURL= e;
+        this.imagenURL= e;
       }
       set Descripcion(e: string) {
-        this.Descripcion = e;
+        this.descripcion = e;
       }
       
 }

@@ -1,42 +1,52 @@
+import { Canal } from "./Canal.js";
 
-export class Streamer{
-    private nickname: String;
-    private descripcion:String;
-    private listaDeRedesSociales:String [];
- 
+export class Streamer {
+    private nickname: string;
+    private descripcion?: string | undefined;
+    private listaDeRedesSociales?: string[] | undefined;
+    private myCanal?: Canal | undefined;
+
     constructor(
         nickname: string = '',
-        listaDeRedesSociales: string []= [],
-        descripcion: string = ''
-      ) {
+        listaDeRedesSociales: string[] = [],
+        descripcion: string = '',
+        myCanal?: Canal | undefined
+    ) {
         this.nickname = nickname;
         this.listaDeRedesSociales = listaDeRedesSociales;
         this.descripcion = descripcion;
-      }
-     
-      // Sobreescritura del constructor
+        this.myCanal = myCanal;
+    }
 
-      get Nickname(): string {
-        return this.Nickname;
-      }
-      get ListaDeRedesSociales(): string {
-        return this.ListaDeRedesSociales;
-      }
-      get Descripcion(): string {
-        return this.Descripcion;
-      }
-     
-      
-      
-    
-      set Nickname(e: string) {
-        this.Nickname = e;
-      }
-      set  ListaDeRedesSociales(e: string) {
-        this.ListaDeRedesSociales= e;
-      }
-      set Descripcion(e: string) {
-        this.Descripcion = e;
-      }
-      
+    getNickname(): string {
+        return this.nickname;
+    }
+
+    getListaDeRedesSociales(): string[] | undefined {
+        return this.listaDeRedesSociales;
+    }
+
+    getDescripcion(): string | undefined {
+        return this.descripcion;
+    }
+
+    setNickname(nickname: string) {
+        this.nickname = nickname;
+    }
+
+    setListaDeRedesSociales(listaDeRedesSociales: string[]) {
+        this.listaDeRedesSociales = listaDeRedesSociales;
+    }
+
+    setDescripcion(descripcion: string) {
+        this.descripcion = descripcion;
+    }
+
+    getMyCanal(): Canal | undefined {
+        return this.myCanal;
+    }
+
+    setMyCanal(canal: Canal): void {
+        this.myCanal = canal;
+    }
 }
